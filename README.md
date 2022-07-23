@@ -1,3 +1,4 @@
+node_modules folder in front end is not being added to git. Please install that using npm install.
 Valid username: only alphabets
 Valid password: 10 digits
 
