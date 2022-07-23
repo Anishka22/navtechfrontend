@@ -1,0 +1,66 @@
+<p>order works!</p>
+<mat-toolbar color="primary">
+    <mat-toolbar-row fxlayout="row">
+    <span class="title-center">Login</span></mat-toolbar-row>
+    </mat-toolbar>
+    <mat-dialog-content class="mat-typography">
+        <form [formGroup]= "signupForm">
+            <div fxFlex fxLayout="column">
+            <mat-form-field appearance="fill" fxFlex>
+                <mat-label>orderid</mat-label>
+                <input matInput formControlName="orderid" required>
+                <mat-error *ngIf="signupForm.controls.orderid.touched && signupForm.controls.orderid.invalid">
+                    <span *ngIf="signupForm.controls.orderid.errors.required">This field is mandatory</span>
+                    <span *ngIf="signupForm.controls.orderid.errors.pattern">This field is invalid</span>
+                </mat-error>
+            </mat-form-field>    
+            <mat-form-field appearance="fill" fxFlex>
+                <mat-label>duedate</mat-label>
+                <input matInput formControlName="duedate"  required>
+                <mat-error *ngIf="signupForm.controls.duedate.touched && signupForm.controls.duedate.invalid">
+                    <span *ngIf="signupForm.controls.duedate.errors.required">This field is mandatory</span>
+                    <span *ngIf="signupForm.controls.duedate.errors.pattern">This field is invalid</span>
+                </mat-error>
+            </mat-form-field>   
+            <mat-form-field appearance="fill" fxFlex>
+                <mat-label>cusname</mat-label>
+                <input matInput formControlName="cusname"  required>
+                <mat-error *ngIf="signupForm.controls.cusname.touched && signupForm.controls.cusname.invalid">
+                    <span *ngIf="signupForm.controls.cusname.errors.required">This field is mandatory</span>
+                    <span *ngIf="signupForm.controls.cusname.errors.pattern">This field is invalid</span>
+                </mat-error>
+            </mat-form-field>    
+            <mat-form-field appearance="fill" fxFlex>
+                <mat-label>cusaddress</mat-label>
+                <input matInput formControlName="cusaddress"  required>
+                <mat-error *ngIf="signupForm.controls.cusaddress.touched && signupForm.controls.cusaddress.invalid">
+                    <span *ngIf="signupForm.cusaddress.duedate.errors.required">This field is mandatory</span>
+                    <span *ngIf="signupForm.controls.cusaddress.errors.pattern">This field is invalid</span>
+                </mat-error>
+            </mat-form-field>   
+            <mat-form-field appearance="fill" fxFlex>
+                <mat-label>phone</mat-label>
+                <input matInput formControlName="phone"  required>
+                <mat-error *ngIf="signupForm.controls.phone.touched && signupForm.controls.phone.invalid">
+                    <span *ngIf="signupForm.controls.phone.errors.required">This field is mandatory</span>
+                    <span *ngIf="signupForm.controls.phone.errors.pattern">This field is invalid</span>
+                </mat-error>
+
+            </mat-form-field>   
+            <mat-form-field appearance="fill" fxFlex>
+                <mat-label>total</mat-label>
+                <input matInput formControlName="total"  required>
+                <mat-error *ngIf="signupForm.controls.total.touched && signupForm.controls.total.invalid">
+                    <span *ngIf="signupForm.controls.total.errors.required">This field is mandatory</span>
+                    <span *ngIf="signupForm.controls.total.errors.pattern">This field is invalid</span>
+                </mat-error>
+            </mat-form-field>   
+            </div>
+    
+        </form>
+    </mat-dialog-content>
+    <mat-dialog-actions align="center">
+        <button mat-raised-button color="primary" type="submit" (click)="handleSubmit()"
+        [disabled]="!(productForm.valid && productForm.dirty)">{{action}}</button>
+        <button mat-raised-button color="primary" mat-dialog-close></button>
+    </mat-dialog-actions>

@@ -1,0 +1,47 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row fxlayout="row">
+    <span class="title-center">Delete</span></mat-toolbar-row>
+    </mat-toolbar>
+    <mat-dialog-content class="mat-typography">
+        <form [formGroup]= "editForm">
+            <div fxFlex fxLayout="column">
+                
+            <mat-form-field appearance="fill" fxFlex>
+                <mat-label>ordernumber</mat-label>
+                <input matInput formControlName="ordernumber" required>
+                
+            </mat-form-field>    
+            <mat-form-field appearance="fill" fxFlex>
+                <mat-label>duedate</mat-label>
+                <input matInput formControlName="duedate" required>
+                
+            </mat-form-field>    
+            <mat-form-field appearance="fill" fxFlex>
+                <mat-label>cusname</mat-label>
+                <input matInput formControlName="cusname" required>
+                
+            </mat-form-field>  
+            <mat-form-field appearance="fill" fxFlex>
+                <mat-label>cusaddress</mat-label>
+                <input matInput formControlName="cusaddress" required>
+                
+            </mat-form-field>
+            <mat-form-field appearance="fill" fxFlex>
+                <mat-label>phone</mat-label>
+                <input matInput formControlName="phone" required>
+                
+            </mat-form-field>    
+            <mat-form-field appearance="fill" fxFlex>
+                <mat-label>total</mat-label>
+                <input matInput formControlName="total" required>
+                
+            </mat-form-field>  
+            </div>
+    
+        </form>
+    </mat-dialog-content>
+    <mat-dialog-actions align="center">
+        
+       
+        <button mat-raised-button color="primary" mat-dialog-close>Delete</button>
+    </mat-dialog-actions>

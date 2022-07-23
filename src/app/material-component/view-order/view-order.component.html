@@ -1,0 +1,45 @@
+<mat-card><button (click)="handleAddAction()">Add Order </button></mat-card>
+<div class="responsive-table">
+    <table mat-table [dataSource]="dataSource">
+        <ng-container matColumnDef="orderid">
+            <th mat-header>Orderid</th>
+            <th mat-cell>{{element.orderid}}</th>
+        </ng-container>
+        <ng-container matColumnDef="duedate">
+            <th mat-header>Duedate</th>
+            <th mat-cell>{{element.duedate}}</th>
+        </ng-container>
+        <ng-container matColumnDef="cusname">
+            <th mat-header>Cusname</th>
+            <th mat-cell>{{element.cusname}}</th>
+        </ng-container>
+        <ng-container matColumnDef="cusaddress">
+            <th mat-header>cusaddress</th>
+            <th mat-cell>{{element.cusaddress}}</th>
+        </ng-container>
+        <ng-container matColumnDef="phone">
+            <th mat-header>Phone</th>
+            <th mat-cell>{{element.phone}}</th>
+        </ng-container>
+        <ng-container matColumnDef="total">
+            <th mat-header>Total</th>
+            <th mat-cell>{{element.total}}</th>
+        </ng-container>
+        <ng-container matColumnDef="edit">
+            <th mat-header>Action</th>
+            <th mat-cell> class="action-link>
+                <button (click)="handleEditAction()">
+                    <mat-icon>edit</mat-icon>
+                </button>
+                <button (click)="handleDelAction()">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </th>
+        </ng-container>
+        
+        
+        
+        
+    </table>
+
+</div>

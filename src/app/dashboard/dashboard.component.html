@@ -1,0 +1,41 @@
+<body>
+    <mat-card>
+        <b><span> Orders</span></b><br>
+        <b ><span> <a (click)="addupaction()">Add</a></span></b>
+        <table>
+            <tr>
+              <th>OrderNumber</th>
+              <th>Duedate</th>
+              <th>Customername</th>
+              <th>Customeraddress</th>
+              <th>Phone</th>
+              <th>Total</th>
+              
+              
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>1-6-2022</td>
+              <td>Maria Anders</td>
+              <td>Germany</td>
+              <td>1234567890</td>
+              <td>500</td>
+              <td><a (click)="editupaction()">Edit</a></td>
+              <td><a (click)="delupaction()">Delete</a></td>
+            </tr>
+            <tr>
+              
+              <td>2</td>
+              <td>2-6-2022</td>
+              <td>Francisco Chang</td>
+              <td>Mexico</td>
+              <td>2234567890</td>
+              <td>600</td>
+              <td><a (click)="editupaction()">Edit</a></td>
+              <td><a (click)="delupaction()">Delete</a></td>
+            </tr>
+          </table>
+          
+    </mat-card>
+
+</body>
